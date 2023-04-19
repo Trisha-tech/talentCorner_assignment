@@ -1,11 +1,15 @@
 import React from 'react';
-import {Box,Typography} from '@mui/material'
+import { Routes as Switch, Route } from "react-router-dom";
+import MainPage from './components/MainPage';
+import HomePage from './allPages/HomePage';
 
 function App() {
   return (
-  <Box>
-    <Typography>Welcome to Talent Corner HR Services Private Limited Assignment !!!    Made by Trisha Sahu </Typography>
-  </Box>
+    <MainPage>
+      <Switch>
+        <Route path="/" element={<HomePage />} />
+      </Switch>
+    </MainPage>
   );
 }
 
