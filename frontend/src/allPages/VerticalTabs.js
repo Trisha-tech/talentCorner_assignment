@@ -5,6 +5,9 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+
+import CreateWorkshop from './CreateWorkshop';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -47,21 +50,21 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: '100%' }}
+      sx={{ flexGrow: 1, display: 'flex', height: '100%' }}
     >
       <Tabs
         orientation="vertical"
-        
+
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: 'divider' }}
       >
-        <Tab style={{padding:25,textTransform:'capitalize', fontSize:"30px",fontFamily:"Roboto"}} label="Create Workshop" {...a11yProps(0)} />
-        <Tab style={{padding:25,textTransform:'capitalize', fontSize:"30px",fontFamily:"Roboto"}} label="Display Workshops" {...a11yProps(1)} />
+        <Tab style={{ paddingTop: 30,paddingBottom:30, textTransform: 'capitalize', fontSize: "30px", fontFamily: "Roboto",width:"450px" }} label="Create Workshop" {...a11yProps(0)} />
+        <Tab style={{ paddingTop:30,paddingBottom:30, textTransform: 'capitalize', fontSize: "30px", fontFamily: "Roboto",width:"450px" }} label="Display Workshops" {...a11yProps(1)} />
       </Tabs>
-      <TabPanel value={value} index={0}>
-        Create Workshop
+      <TabPanel value={value} index={0} style={{ minWidth: 0, width: '75%', padding: '18px 60px' }}>
+        <CreateWorkshop />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Display Workshops

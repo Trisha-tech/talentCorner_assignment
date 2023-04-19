@@ -3,6 +3,7 @@ import { Routes as Switch, Route } from "react-router-dom";
 import MainPage from './components/MainPage';
 import HomePage from './allPages/HomePage';
 import VerticalTabs from './allPages/VerticalTabs';
+import './App.css'
 
 function App() {
   return (
